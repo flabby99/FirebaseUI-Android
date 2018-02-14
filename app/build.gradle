@@ -10,6 +10,8 @@ android {
         targetSdkVersion targetSdk
         versionCode 1
         versionName version
+        //See only relevant translations
+        resConfigs "auto"
 
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
@@ -63,6 +65,19 @@ dependencies {
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
     testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+
+    // Sean added these:
+    // FirebaseUI for Firebase Realtime Database
+    //implementation 'com.firebaseui:firebase-ui-database:3.2.1'
+
+    // FirebaseUI for Cloud Firestore
+    //implementation 'com.firebaseui:firebase-ui-firestore:3.2.1'
+
+    // FirebaseUI for Firebase Auth
+    implementation 'com.firebaseui:firebase-ui-auth:3.2.1'
+
+    // FirebaseUI for Cloud Storage
+    //implementation 'com.firebaseui:firebase-ui-storage:3.2.1'
 }
 
 apply plugin: 'com.google.gms.google-services'
